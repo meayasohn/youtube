@@ -78,5 +78,6 @@ body {
     var(--color-ligth-blue);
   border-style: ridge;
   border-color: var(--color-light-grey);
-  margin: 5px;
+  margin: var(--size-item-margin);
+  padding: var(--size-item-margin);
 }

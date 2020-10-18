@@ -21,10 +21,17 @@ function App() {
       .catch(error => console.log('error', error));
   }, []);
 
+  const haldleOnSearch=(serachText)=>{
+    console.log(serachText);
+    const videos_filtered = video_list.filter(video => video.snippet.title.includes(serachText));
+    console.log(videos_filtered);
+    SetVideoList(videos_filtered);
+  }
 
   return (
     <>
-    <Navbar/>
+    <Navbar
+    onClickSearch ={haldleOnSearch}/>
     <Videolist
     videos = {video_list}
     />

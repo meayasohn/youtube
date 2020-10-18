@@ -1,0 +1,42 @@
+/* /////////////// */
+/* item area */
+/* /////////////// */
+
+.video {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  /* box-sizing: border-box; */
+  border: 1px solid var(--color-light-grey);
+  border-radius: 3px;
+  margin-bottom: 0.2rem;
+  border-style: ridge;
+  box-shadow: 3px 4px 17px -2px rgba(206, 207, 224, 0.88);
+  /* box-shadow: var(--size-box-shadow) var(--size-box-shadow)
+    var(--color-ligth-blue); */
+  padding: var(--size-item-margin);
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+  margin: 5px;
+}
+
+.video:hover {
+  transform: scale(1.02);
+}
+
+.thumnail {
+  width: 40%;
+  padding: 2px;
+}
+
+.title,
+.channel {
+  margin: auto;
+  margin-left: 5px;
+  font-size: 1em;
+  /* font-weight: bold; */
+}
+
+.channel {
+  font-size: 0.9rem;
+}

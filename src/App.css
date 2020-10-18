@@ -63,21 +63,3 @@ body {
   font: var(--size-navbar-title);
   color: ;
 }
-
-/* /////////////// */
-/* item area */
-/* /////////////// */
-
-.video-item {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  align-content: center;
-
-  box-shadow: var(--size-box-shadow) var(--size-box-shadow)
-    var(--color-ligth-blue);
-  border-style: ridge;
-  border-color: var(--color-light-grey);
-  margin: var(--size-item-margin);
-  padding: var(--size-item-margin);
-}

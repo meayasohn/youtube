@@ -1,22 +1,41 @@
 import React from 'react';
+import { useRef } from 'react';
+import style from "./navbar.module.css"
 
-const Navbar = (props) => {
-  const inputRef = React.createRef();
+const Navbar = ({onClickSearch}) => {
+  // const inputRef = React.createRef();
+    const inputRef = useRef();
+
+  const handleSearch=() =>{
+    onClickSearch(inputRef.current.value);
+  }
+
+  const onKeyPress =(event)=>{
+    if(event.key !='Enter')
+      return;
+    handleSearch();
+  }
 
   const onClickSearchBtn=(event)=>{
-    props.onClickSearch(inputRef.current.value);
+    handleSearch();
   }
 
   return (
-    <div className="navbar">
-        <img className="navbar-icon" src="../../public/images/logo.png" alt=""/>
-        <span className="navbar-title">Youtube</span>
+    <div className={style.navbar}>
+        <img className={style.navbaricon} src="/images/logo.png" alt="logo"/>
+        <p className={style.navbartitle}>Youtube</p>
         <input 
           ref = {inputRef}
-          className="search-bar" 
-          type="text" />
-        <button className="search-button" onClick={onClickSearchBtn}>
-          <i className="fas fa-search"></i>
+          className={style.searchbar}
+          type="search"
+          placeholder="Search.." 
+          onKeyPress={onKeyPress}/>
+        <button className={style.searchbutton} >
+          <img src="/images/search.png" alt=""/>
+          
+        </button>
+        <button className={style.searchIcon} onClick={onClickSearchBtn}>
+        <i class="fas fa-search"></i>
         </button>
     </div>
   );

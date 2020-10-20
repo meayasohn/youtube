@@ -1,9 +1,13 @@
 import React from 'react';
 import style from './videoitem.module.css';
 
-const VideoItem = ({video: {snippet}}) => (
+const VideoItem = ({video: {snippet},column}) => {
 
-      <li className={style.video}>
+  const columSize = column==2? "50%" : "100%";
+  const columnStyle = {width: {columSize}};
+  
+    return (
+      <li className={style.video} style={columnStyle}>
         <img 
           className={style.thumbnail} 
           src={snippet.thumbnails.medium.url} 
@@ -13,6 +17,7 @@ const VideoItem = ({video: {snippet}}) => (
         <p className={style.channel}>Channel from : {snippet.channelTitle}</p>
         </div>
       </li>
-);
+    );
+}
 
 export default VideoItem;

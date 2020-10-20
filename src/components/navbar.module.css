@@ -1,0 +1,41 @@
+/* /////////////// */
+/* navbar area */
+/* /////////////// */
+
+.navbar {
+  display: flex;
+  background-color: var(--color-black);
+  justify-content: center;
+  margin: auto;
+  height: 4rem;
+  align-items: center;
+}
+
+.navbaricon {
+  /* width: 50px;
+  height: 50px; */
+}
+
+.navbartitle {
+  font: var(--size-navbar-title) Arial;
+  font-weight: bold;
+  color: var(--color-white);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: var(--size-item-margin);
+}
+
+.searchbar {
+  font: var(--size-navbar-title) Arial;
+  height: 2rem;
+  flex-basis: 100%;
+  margin-left: 0px;
+  border-radius: 5px;
+  outline: 0;
+}
+
+.searchbutton {
+}
+
+.searchIcon {
+  color: red;
+}

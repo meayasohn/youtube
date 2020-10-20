@@ -5,8 +5,8 @@
 .video {
   display: flex;
   align-items: center;
-  width: 45%;
-  /* box-sizing: border-box; */
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid var(--color-light-grey);
   border-radius: 3px;
   margin-bottom: 0.2rem;
@@ -14,10 +14,9 @@
   box-shadow: 3px 4px 17px -2px rgba(206, 207, 224, 0.88);
   /* box-shadow: var(--size-box-shadow) var(--size-box-shadow)
     var(--color-ligth-blue); */
-  padding: var(--size-item-margin);
+  /* padding: var(--size-item-margin); */
   cursor: pointer;
   transition: transform 250ms ease-in;
-  margin: 5px;
 }
 
 .video:hover {
@@ -26,7 +25,7 @@
 
 .thumnail {
   width: 40%;
-  padding: 2px;
+  padding: 5%;
 }
 
 .title,

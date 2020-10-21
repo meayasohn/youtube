@@ -5,8 +5,7 @@ import style from './videolist.module.css';
 const VideoList = (props)=>{
 
   console.log("video list");
-  console.log(props.column);
-
+  
   return(
   <div className={style.video_container}>
     <ul className={style.videolist}>

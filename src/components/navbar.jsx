@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
-import style from "./navbar.module.css"
+import style from "./navbar.module.css";
 
 const Navbar = ({onClickSearch}) => {
   // const inputRef = React.createRef();
@@ -22,7 +22,7 @@ const Navbar = ({onClickSearch}) => {
 
   return (
     <div className={style.navbar}>
-        <img className={style.navbaricon} src="/images/logo.png" alt="logo"/>
+        <img className={style.navbaricon} src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/>
         <p className={style.navbartitle}>Youtube</p>
         <input 
           ref = {inputRef}
@@ -31,11 +31,7 @@ const Navbar = ({onClickSearch}) => {
           placeholder="Search.." 
           onKeyPress={onKeyPress}/>
         <button className={style.searchbutton} >
-          <img src="/images/search.png" alt=""/>
-          
-        </button>
-        <button className={style.searchIcon} onClick={onClickSearchBtn}>
-        <i class="fas fa-search"></i>
+          <img src={process.env.PUBLIC_URL + '/images/search.png'} alt=""/>
         </button>
     </div>
   );

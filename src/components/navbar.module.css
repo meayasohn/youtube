@@ -4,11 +4,14 @@
 
 .navbar {
   display: flex;
-  background-color: var(--color-black);
+  align-items: center;
   justify-content: center;
+
+  background-color: var(--color-black);
+  border-radius: 5px;
   margin: auto;
   height: 4rem;
-  align-items: center;
+  padding: 5px;
 }
 
 .navbaricon {
@@ -26,7 +29,7 @@
 
 .searchbar {
   font: var(--size-navbar-title) Arial;
-  height: 2rem;
+  height: 3rem;
   flex-basis: 100%;
   margin-left: 0px;
   border-radius: 5px;
@@ -34,8 +37,6 @@
 }
 
 .searchbutton {
-}
-
-.searchIcon {
-  color: red;
+  height: 3rem;
+  border-radius: 5px;
 }

@@ -5,18 +5,21 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  background-color: var(--color-black);
-  border-radius: 5px;
-  margin: auto;
   height: 4rem;
-  padding: 5px;
+  background: var(--color-black);
+  color: white;
+  /* padding: 5px; */
+  margin: 5px;
+  border-radius: 5px;
+  /* 
+
+ */
 }
 
 .navbaricon {
-  /* width: 50px;
-  height: 50px; */
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
 }
 
 .navbartitle {
@@ -27,16 +30,23 @@
   margin: var(--size-item-margin);
 }
 
-.searchbar {
-  font: var(--size-navbar-title) Arial;
-  height: 3rem;
+.search {
   flex-basis: 100%;
-  margin-left: 0px;
-  border-radius: 5px;
+  font-size: 1.7rem;
   outline: 0;
+  border-radius: 5px;
 }
 
-.searchbutton {
-  height: 3rem;
+.button {
+  height: 70%;
+  background-color: var(--color-light-grey);
   border-radius: 5px;
+  outline: 0;
+  margin: 0.2em;
+}
+
+.buttonImg {
+  height: 100%;
+  border-radius: 5px;
+  padding: 0.3em 0.1em;
 }

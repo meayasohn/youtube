@@ -2,19 +2,28 @@
 /* item area */
 /* /////////////// */
 
+.container {
+  padding: 0.2em;
+}
+
+.container.grid {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
+}
+
 .video {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
   border: 1px solid var(--color-light-grey);
   border-radius: 3px;
-  margin-bottom: 0.2rem;
   border-style: ridge;
   box-shadow: 3px 4px 17px -2px rgba(206, 207, 224, 0.88);
-  /* box-shadow: var(--size-box-shadow) var(--size-box-shadow)
-    var(--color-ligth-blue); */
-  /* padding: var(--size-item-margin); */
+  margin-bottom: 0.2rem;
   cursor: pointer;
   transition: transform 250ms ease-in;
 }
@@ -25,7 +34,11 @@
 
 .thumnail {
   width: 40%;
-  padding: 5%;
+  height: 100%;
+}
+
+.metadata {
+  margin-left: 0.2em;
 }
 
 .title,

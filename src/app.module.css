@@ -34,7 +34,7 @@
   flex: 1 1 30%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 48rem) {
   .container {
     flex-wrap: wrap;
   }

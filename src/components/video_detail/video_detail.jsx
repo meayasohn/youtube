@@ -3,9 +3,6 @@ import style from './video_detail.module.css';
 
 const VideoDetail = ({video, video: {snippet}}) => {
 
-  console.log("Video Selected");
-  console.log(video);
-
   const youtubelink = `https://www.youtube.com/embed/${video.id}`;
 
   return (  
@@ -14,6 +11,7 @@ const VideoDetail = ({video, video: {snippet}}) => {
           className={style.video} 
           id="ytplayer" 
           type="text/html" 
+          title={snippet.title}
           width="100%"
           height="500px"
           src={youtubelink}

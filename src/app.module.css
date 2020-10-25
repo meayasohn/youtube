@@ -23,6 +23,7 @@
 
 .container {
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .detail {
@@ -31,4 +32,10 @@
 
 .list {
   flex: 1 1 30%;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }

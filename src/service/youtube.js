@@ -13,9 +13,7 @@ class Youtube {
       this.getRequestOptions
     );
 
-
     const result = await response.json();
-    console.log(result.items);
     return result.items;
   }
 
@@ -25,7 +23,6 @@ class Youtube {
       this.getRequestOptions
     );
 
-    console.log("Class search");
     const result = await response.json();
     return result.items.map(item => ({ ...item, id: item.id.videoId }));
   }

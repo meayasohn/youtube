@@ -5,42 +5,41 @@ import style from './app.module.css';
 import Navbar from './components/navbar/navbar';
 import Videolist from './components/video_list/video_list';
 import VideoDetail from './components/video_detail/video_detail';
+import { useCallback } from 'react';
 
 function App({youtube}) {
   const [video_list, SetVideoList] = useState([]);
-  const [windowSize, setWindowSize] = useState({
-  width: undefined,
-  height: undefined,
-});
-  const [dissplayMode, setDisplayMode] = useState('grid');
+  const [smallView, setSmallView] = useState(null);
   const [selectVideo, setVideoSelect] = useState(null);
 
+  // Data 
+  // ///////////////////////////////
+  // from Outside App
 
-  const search = query => {
-    setVideoSelect(null);
-    //if search is taking time, show loading images;
-
-    youtube
-      .search(query) //
-      .then(videos => SetVideoList(videos));
-  };
-
-  const handleResize=()=> {
-    if(window.innerWidth>(window.screen.availWidth/2))
-      setDisplayMode('grid');
-    else
-      setDisplayMode('list');
-
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  }
+    // Control
+  // ///////////////////////////////
+  const search = useCallback(query => {
+      setVideoSelect(null);
+      //if search is taking time, show loading images;
+  
+      youtube
+        .search(query) //
+        .then(videos => SetVideoList(videos));
+    }, [youtube]);
 
   const handleVideoClick = (video)=>{
       setVideoSelect(video);
   }
-  
+
+  // View
+  // ///////////////////////////////
+  const handleResize=()=> {
+    if(window.innerWidth>(window.screen.availWidth/2))
+      setSmallView(null);
+    else
+      setSmallView(window.innerWidth);
+  }
+
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -63,7 +62,7 @@ function App({youtube}) {
         <div className={style.list}>
           <Videolist
           videos = {video_list}
-          display = {selectVideo? 'list':'grid'}
+          display = {selectVideo || smallView? 'list':'grid'}
           onVideoClick = {handleVideoClick}
           />
         </div>
